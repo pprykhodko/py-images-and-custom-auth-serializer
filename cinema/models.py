@@ -9,7 +9,7 @@ from django.utils.text import slugify
 def create_custom_path(instance: "Movie", filename: str):
     _, extension = os.path.splitext(filename)
     return os.path.join(
-        "uploads/images/",
+        "uploads/movies/",
         f"{slugify(instance.title)}-{uuid4()}{extension}"
     )
 
